@@ -73,6 +73,12 @@
                 <constraint firstAttribute="trailing" secondItem="Dc4-SH-WGl" secondAttribute="trailing" id="lkw-cE-pX3"/>
             </constraints>
             <size key="customSize" width="266" height="108"/>
+            <connections>
+                <outlet property="foodCaloriesLabel" destination="fq3-V7-LXT" id="LGo-fg-ahc"/>
+                <outlet property="foodDescriptionLabel" destination="lSS-uH-nmO" id="aTW-kg-Hi3"/>
+                <outlet property="foodImageLabel" destination="v8E-X9-CMD" id="9hj-8x-lWa"/>
+                <outlet property="foodNameLabel" destination="Idi-e4-62e" id="KFz-Ou-npw"/>
+            </connections>
             <point key="canvasLocation" x="167.93893129770993" y="40.845070422535215"/>
         </collectionViewCell>
     </objects>

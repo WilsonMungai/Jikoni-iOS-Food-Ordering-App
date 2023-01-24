@@ -9,6 +9,9 @@ import UIKit
 
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var foodNameLabel: UILabel!
+    @IBOutlet weak var foodImageLabel: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -67,6 +67,12 @@
                 <constraint firstItem="xZn-KI-fs1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hAL-9r-8aG"/>
             </constraints>
             <size key="customSize" width="218" height="242"/>
+            <connections>
+                <outlet property="caloriesAmountLabel" destination="VaG-8Z-ONi" id="DhU-da-j6U"/>
+                <outlet property="foodDescriptionLabel" destination="MlW-lU-snC" id="pGL-gi-nOM"/>
+                <outlet property="foodImageLabel" destination="N2H-a2-Zz7" id="oOR-TR-pql"/>
+                <outlet property="foodNameLabel" destination="NU5-X1-vbC" id="QsP-br-kdl"/>
+            </connections>
             <point key="canvasLocation" x="132.82442748091603" y="88.028169014084511"/>
         </collectionViewCell>
     </objects>

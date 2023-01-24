@@ -20,6 +20,9 @@
 		C8A23B57297F9764003E4B86 /* PopularDishesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */; };
 		C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */; };
 		C8A23B5E297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */; };
+		C8A23B61298037E2003E4B86 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B60298037E2003E4B86 /* DishCategory.swift */; };
+		C8A23B63298037F4003E4B86 /* PopularDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B62298037F4003E4B86 /* PopularDish.swift */; };
+		C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B642980380B003E4B86 /* SpecialDish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularDishesCollectionViewCell.xib; sourceTree = "<group>"; };
 		C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefSpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefSpecialCollectionViewCell.xib; sourceTree = "<group>"; };
+		C8A23B60298037E2003E4B86 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		C8A23B62298037F4003E4B86 /* PopularDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDish.swift; sourceTree = "<group>"; };
+		C8A23B642980380B003E4B86 /* SpecialDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDish.swift; sourceTree = "<group>"; };
 		F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.debug.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +98,7 @@
 		C8A23B2E297F862F003E4B86 /* Jikoni */ = {
 			isa = PBXGroup;
 			children = (
+				C8A23B5F29803777003E4B86 /* Models */,
 				C8A23B4A297F96A7003E4B86 /* CustomViewCells */,
 				C8A23B48297F86E6003E4B86 /* Views */,
 				C8A23B47297F86D9003E4B86 /* Controllers */,
@@ -179,6 +186,16 @@
 				C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */,
 			);
 			path = ChefSpecialCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C8A23B5F29803777003E4B86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8A23B60298037E2003E4B86 /* DishCategory.swift */,
+				C8A23B62298037F4003E4B86 /* PopularDish.swift */,
+				C8A23B642980380B003E4B86 /* SpecialDish.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +321,10 @@
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
 				C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */,
+				C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */,
+				C8A23B61298037E2003E4B86 /* DishCategory.swift in Sources */,
 				C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */,
+				C8A23B63298037F4003E4B86 /* PopularDish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

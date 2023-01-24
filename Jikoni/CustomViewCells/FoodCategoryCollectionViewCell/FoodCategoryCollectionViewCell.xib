@@ -56,6 +56,10 @@
                 <constraint firstItem="xbi-Pd-Tg6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SOi-ch-YuU"/>
             </constraints>
             <size key="customSize" width="150" height="56"/>
+            <connections>
+                <outlet property="foodImageLabel" destination="yht-j8-rJI" id="fkU-19-T0l"/>
+                <outlet property="foodNameLabel" destination="9VA-m5-4va" id="hVN-8Q-cCa"/>
+            </connections>
             <point key="canvasLocation" x="82.44274809160305" y="21.126760563380284"/>
         </collectionViewCell>
     </objects>
