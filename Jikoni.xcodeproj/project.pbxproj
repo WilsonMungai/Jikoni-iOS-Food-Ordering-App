@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69D3BC6E13294CCB89232F35 /* Pods_Jikoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */; };
 		C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B2F297F862F003E4B86 /* AppDelegate.swift */; };
 		C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B31297F862F003E4B86 /* SceneDelegate.swift */; };
-		C8A23B34297F862F003E4B86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B33297F862F003E4B86 /* ViewController.swift */; };
+		C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B33297F862F003E4B86 /* HomeViewController.swift */; };
 		C8A23B37297F862F003E4B86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B35297F862F003E4B86 /* Main.storyboard */; };
 		C8A23B39297F8631003E4B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B38297F8631003E4B86 /* Assets.xcassets */; };
 		C8A23B3C297F8631003E4B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B3A297F8631003E4B86 /* LaunchScreen.storyboard */; };
+		C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B4B297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift */; };
+		C8A23B4E297F96E4003E4B86 /* FoodCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B4C297F96E4003E4B86 /* FoodCategoryCollectionViewCell.xib */; };
+		C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B54297F9764003E4B86 /* PopularDishesCollectionViewCell.swift */; };
+		C8A23B57297F9764003E4B86 /* PopularDishesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */; };
+		C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */; };
+		C8A23B5E297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jikoni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.release.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.release.xcconfig"; sourceTree = "<group>"; };
 		C8A23B2C297F862F003E4B86 /* Jikoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jikoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A23B2F297F862F003E4B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A23B31297F862F003E4B86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C8A23B33297F862F003E4B86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8A23B33297F862F003E4B86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C8A23B36297F862F003E4B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8A23B38297F8631003E4B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8A23B3B297F8631003E4B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8A23B3D297F8631003E4B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8A23B4B297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8A23B4C297F96E4003E4B86 /* FoodCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		C8A23B54297F9764003E4B86 /* PopularDishesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDishesCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularDishesCollectionViewCell.xib; sourceTree = "<group>"; };
+		C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefSpecialCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefSpecialCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.debug.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D3BC6E13294CCB89232F35 /* Pods_Jikoni.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1AC57264A15CF3EA718E8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */,
+				AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4603F73A2FDBE8489269145 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C8A23B23297F862F003E4B86 = {
 			isa = PBXGroup;
 			children = (
 				C8A23B2E297F862F003E4B86 /* Jikoni */,
 				C8A23B2D297F862F003E4B86 /* Products */,
+				4E1AC57264A15CF3EA718E8F /* Pods */,
+				C4603F73A2FDBE8489269145 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +92,7 @@
 		C8A23B2E297F862F003E4B86 /* Jikoni */ = {
 			isa = PBXGroup;
 			children = (
+				C8A23B4A297F96A7003E4B86 /* CustomViewCells */,
 				C8A23B48297F86E6003E4B86 /* Views */,
 				C8A23B47297F86D9003E4B86 /* Controllers */,
 				C8A23B46297F86BF003E4B86 /* Managers */,
@@ -86,7 +123,7 @@
 		C8A23B47297F86D9003E4B86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C8A23B33297F862F003E4B86 /* ViewController.swift */,
+				C8A23B33297F862F003E4B86 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +144,43 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		C8A23B4A297F96A7003E4B86 /* CustomViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C8A23B51297F971F003E4B86 /* ChefSpecialCollectionViewCell */,
+				C8A23B50297F9702003E4B86 /* PopularDishesCollectionViewCell */,
+				C8A23B4F297F96EE003E4B86 /* FoodCategoryCollectionViewCell */,
+			);
+			path = CustomViewCells;
+			sourceTree = "<group>";
+		};
+		C8A23B4F297F96EE003E4B86 /* FoodCategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C8A23B4B297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift */,
+				C8A23B4C297F96E4003E4B86 /* FoodCategoryCollectionViewCell.xib */,
+			);
+			path = FoodCategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C8A23B50297F9702003E4B86 /* PopularDishesCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C8A23B54297F9764003E4B86 /* PopularDishesCollectionViewCell.swift */,
+				C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */,
+			);
+			path = PopularDishesCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C8A23B51297F971F003E4B86 /* ChefSpecialCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */,
+				C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */,
+			);
+			path = ChefSpecialCollectionViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8A23B40297F8631003E4B86 /* Build configuration list for PBXNativeTarget "Jikoni" */;
 			buildPhases = (
+				FC1CADA8F1D49F2D1A7B0ECD /* [CP] Check Pods Manifest.lock */,
 				C8A23B28297F862F003E4B86 /* Sources */,
 				C8A23B29297F862F003E4B86 /* Frameworks */,
 				C8A23B2A297F862F003E4B86 /* Resources */,
+				21455EC902A164CE837182C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,20 +241,68 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A23B4E297F96E4003E4B86 /* FoodCategoryCollectionViewCell.xib in Resources */,
+				C8A23B57297F9764003E4B86 /* PopularDishesCollectionViewCell.xib in Resources */,
 				C8A23B3C297F8631003E4B86 /* LaunchScreen.storyboard in Resources */,
 				C8A23B39297F8631003E4B86 /* Assets.xcassets in Resources */,
+				C8A23B5E297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib in Resources */,
 				C8A23B37297F862F003E4B86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21455EC902A164CE837182C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jikoni/Pods-Jikoni-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jikoni/Pods-Jikoni-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jikoni/Pods-Jikoni-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC1CADA8F1D49F2D1A7B0ECD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jikoni-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8A23B28297F862F003E4B86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A23B34297F862F003E4B86 /* ViewController.swift in Sources */,
+				C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */,
+				C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */,
+				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
+				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
 				C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */,
 				C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */,
 			);
@@ -322,6 +446,7 @@
 		};
 		C8A23B41297F8631003E4B86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +475,7 @@
 		};
 		C8A23B42297F8631003E4B86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
