@@ -35,6 +35,14 @@ class HomeViewController: UIViewController {
         .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
     ]
     
+    var special: [SpecialDish] = [
+        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,8 +68,11 @@ class HomeViewController: UIViewController {
         // Register food category collection view cell
         foodCategoryCollectionView.register(UINib(nibName: FoodCategoryCollectionViewCell.cellIdentifier, bundle: nil), forCellWithReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier)
         
-        // Register popular dishes collection view cee
+        // Register popular dishes collection view cell
         popularDishesCategoryCollectionView.register(UINib(nibName: PopularDishesCollectionViewCell.cellIdentifier, bundle: nil), forCellWithReuseIdentifier: PopularDishesCollectionViewCell.cellIdentifier)
+        
+        // Register chef special collection view cell
+        chefSpecialCategoryCollectionView.register(UINib(nibName: ChefSpecialCollectionViewCell.cellIdentifier, bundle: nil), forCellWithReuseIdentifier: ChefSpecialCollectionViewCell.cellIdentifier)
     }
 }
 
@@ -76,6 +87,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         case popularDishesCategoryCollectionView:
             return popularDishes.count
+            
+        case chefSpecialCategoryCollectionView:
+            return special.count
             
         default: return 0
         }
@@ -97,11 +111,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.setup(popularDish: popularDishes[indexPath.row])
             return cell
             
+            // Inflating chef special dishes category collection view cell
+        case chefSpecialCategoryCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChefSpecialCollectionViewCell.cellIdentifier, for: indexPath) as! ChefSpecialCollectionViewCell
+            cell.setup(specialDish: special[indexPath.row])
+            return cell
+            
         default: return UICollectionViewCell()
         }
        
     }
-    
     
 }
 
