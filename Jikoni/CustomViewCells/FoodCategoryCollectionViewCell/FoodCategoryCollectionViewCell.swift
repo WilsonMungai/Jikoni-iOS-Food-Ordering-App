@@ -14,6 +14,10 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
     // Cell identifier
     static let cellIdentifier = "FoodCategoryCollectionViewCell"
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     // MARK: - Outlets
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodImageLabel: UIImageView!

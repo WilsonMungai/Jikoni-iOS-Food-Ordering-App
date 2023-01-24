@@ -13,6 +13,10 @@ class PopularDishesCollectionViewCell: UICollectionViewCell {
     // Cell identifier
     static let cellIdentifier = "PopularDishesCollectionViewCell"
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     // MARK: - Outlets
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodImageLabel: UIImageView!

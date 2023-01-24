@@ -164,6 +164,11 @@
                             <color key="tintColor" red="0.92549026010000002" green="0.54509806630000002" blue="0.20000001789999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chefSpecialCategoryCollectionView" destination="82x-wt-6Ty" id="TMd-bu-tu6"/>
+                        <outlet property="foodCategoryCollectionView" destination="O7t-AS-XWy" id="dPx-29-siE"/>
+                        <outlet property="popularDishesCategoryCollectionView" destination="cmP-Yp-uie" id="QaX-8R-8Ju"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

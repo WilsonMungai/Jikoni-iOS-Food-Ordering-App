@@ -13,6 +13,10 @@ class ChefSpecialCollectionViewCell: UICollectionViewCell {
     // Cell identifier
     static let cellIdentifier = "ChefSpecialCollectionViewCell"
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     // MARK: - Outlets
     @IBOutlet weak var foodImageLabel: UIImageView!
     @IBOutlet weak var foodNameLabel: UILabel!
