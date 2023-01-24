@@ -23,6 +23,7 @@
 		C8A23B61298037E2003E4B86 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B60298037E2003E4B86 /* DishCategory.swift */; };
 		C8A23B63298037F4003E4B86 /* PopularDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B62298037F4003E4B86 /* PopularDish.swift */; };
 		C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B642980380B003E4B86 /* SpecialDish.swift */; };
+		C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C8A23B60298037E2003E4B86 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
 		C8A23B62298037F4003E4B86 /* PopularDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDish.swift; sourceTree = "<group>"; };
 		C8A23B642980380B003E4B86 /* SpecialDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDish.swift; sourceTree = "<group>"; };
+		C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherStringExtension.swift; sourceTree = "<group>"; };
 		F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.debug.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 		C8A23B46297F86BF003E4B86 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C8B019F429804237003C2BE9 /* Extensions */,
 				C8A23B2F297F862F003E4B86 /* AppDelegate.swift */,
 				C8A23B31297F862F003E4B86 /* SceneDelegate.swift */,
 			);
@@ -196,6 +199,14 @@
 				C8A23B642980380B003E4B86 /* SpecialDish.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C8B019F429804237003C2BE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +331,7 @@
 				C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */,
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
+				C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */,
 				C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */,
 				C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */,
 				C8A23B61298037E2003E4B86 /* DishCategory.swift in Sources */,

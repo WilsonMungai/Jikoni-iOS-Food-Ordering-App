@@ -11,6 +11,7 @@ import UIKit
 struct SpecialDish {
     let id: String?
     let name: String?
+    let image: String?
     let description: String?
     let calories: Int?
     
