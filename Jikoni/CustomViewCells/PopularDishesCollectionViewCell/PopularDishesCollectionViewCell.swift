@@ -25,7 +25,7 @@ class PopularDishesCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Setup function
     // Function that takes popularDish as a param of type PopularDish to assign the struct values to the cell
-    func setup(popularDish: PopularDish) {
+    func setup(popularDish: Food) {
         foodNameLabel.text = popularDish.name
         foodImageLabel.kf.setImage(with: popularDish.image?.asUrl)
         caloriesAmountLabel.text = popularDish.formattedCalories

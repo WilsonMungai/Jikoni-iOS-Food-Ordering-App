@@ -26,16 +26,16 @@ class HomeViewController: UIViewController {
     ]
     
     // Popular dishes values
-    var popularDishes: [PopularDish] = [
-        .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+    var popularDishes: [Food] = [
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
     ]
     
-    var special: [SpecialDish] = [
+    var special: [Food] = [
         .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
         .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
         .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
@@ -76,8 +76,10 @@ class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - Extension
+// MARK: - Extension Delegate & Datasource
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    // Returns the number of items
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch collectionView {
@@ -96,6 +98,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     }
     
+    // Inflates the collection view with cells data
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch collectionView {
@@ -120,6 +123,30 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         default: return UICollectionViewCell()
         }
        
+    }
+    
+    // Gets the selected cell
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Select an item on food category to see a list of food items
+        if collectionView == foodCategoryCollectionView {
+            // do something else
+        } else {
+            // Select the other two view controllers to see the details for each food
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
+            
+            // Switch case to see which item is selected between the two view controllers
+            switch collectionView {
+                
+            case popularDishesCategoryCollectionView:
+                controller.selectedFood = popularDishes[indexPath.row]
+                
+            case chefSpecialCategoryCollectionView:
+                controller.selectedFood = special[indexPath.row]
+                
+            default: return
+            }
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
 }

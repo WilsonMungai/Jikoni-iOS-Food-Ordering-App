@@ -8,7 +8,7 @@
 import UIKit
 
 // Popular dishes data structure
-struct PopularDish {
+struct Food {
     let id: String?
     let name: String?
     let image: String?

@@ -24,6 +24,7 @@
 		C8A23B63298037F4003E4B86 /* PopularDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B62298037F4003E4B86 /* PopularDish.swift */; };
 		C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B642980380B003E4B86 /* SpecialDish.swift */; };
 		C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */; };
+		C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C8A23B62298037F4003E4B86 /* PopularDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDish.swift; sourceTree = "<group>"; };
 		C8A23B642980380B003E4B86 /* SpecialDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDish.swift; sourceTree = "<group>"; };
 		C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherStringExtension.swift; sourceTree = "<group>"; };
+		C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.debug.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				C8A23B33297F862F003E4B86 /* HomeViewController.swift */,
+				C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			files = (
 				C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */,
 				C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */,
+				C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */,
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
 				C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */,
