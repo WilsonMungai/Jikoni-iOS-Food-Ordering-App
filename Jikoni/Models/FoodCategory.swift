@@ -8,7 +8,7 @@
 import UIKit
 
 // Dish category data structure
-struct DishCategory {
+struct FoodCategory {
     let id: String?
     let name: String?
     let image: String?

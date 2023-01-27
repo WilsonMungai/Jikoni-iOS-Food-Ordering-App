@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		69D3BC6E13294CCB89232F35 /* Pods_Jikoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */; };
+		C851124E2983861200FC35B4 /* CategoryListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851124C2983861200FC35B4 /* CategoryListViewTableViewCell.swift */; };
+		C851124F2983861200FC35B4 /* CategoryListViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C851124D2983861200FC35B4 /* CategoryListViewTableViewCell.xib */; };
+		C851125129838DF200FC35B4 /* FoodCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */; };
 		C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B2F297F862F003E4B86 /* AppDelegate.swift */; };
 		C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B31297F862F003E4B86 /* SceneDelegate.swift */; };
 		C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B33297F862F003E4B86 /* HomeViewController.swift */; };
@@ -20,8 +23,8 @@
 		C8A23B57297F9764003E4B86 /* PopularDishesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */; };
 		C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */; };
 		C8A23B5E297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */; };
-		C8A23B61298037E2003E4B86 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B60298037E2003E4B86 /* DishCategory.swift */; };
-		C8A23B63298037F4003E4B86 /* PopularDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B62298037F4003E4B86 /* PopularDish.swift */; };
+		C8A23B61298037E2003E4B86 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B60298037E2003E4B86 /* FoodCategory.swift */; };
+		C8A23B63298037F4003E4B86 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B62298037F4003E4B86 /* Food.swift */; };
 		C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B642980380B003E4B86 /* SpecialDish.swift */; };
 		C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */; };
 		C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */; };
@@ -30,6 +33,9 @@
 /* Begin PBXFileReference section */
 		2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jikoni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.release.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.release.xcconfig"; sourceTree = "<group>"; };
+		C851124C2983861200FC35B4 /* CategoryListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewTableViewCell.swift; sourceTree = "<group>"; };
+		C851124D2983861200FC35B4 /* CategoryListViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewTableViewCell.xib; sourceTree = "<group>"; };
+		C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryListViewController.swift; sourceTree = "<group>"; };
 		C8A23B2C297F862F003E4B86 /* Jikoni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jikoni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A23B2F297F862F003E4B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A23B31297F862F003E4B86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +50,8 @@
 		C8A23B55297F9764003E4B86 /* PopularDishesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularDishesCollectionViewCell.xib; sourceTree = "<group>"; };
 		C8A23B5B297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefSpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8A23B5C297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefSpecialCollectionViewCell.xib; sourceTree = "<group>"; };
-		C8A23B60298037E2003E4B86 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
-		C8A23B62298037F4003E4B86 /* PopularDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDish.swift; sourceTree = "<group>"; };
+		C8A23B60298037E2003E4B86 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		C8A23B62298037F4003E4B86 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		C8A23B642980380B003E4B86 /* SpecialDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDish.swift; sourceTree = "<group>"; };
 		C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherStringExtension.swift; sourceTree = "<group>"; };
 		C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,15 @@
 				2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C85112442983847200FC35B4 /* CategoryListView */ = {
+			isa = PBXGroup;
+			children = (
+				C851124C2983861200FC35B4 /* CategoryListViewTableViewCell.swift */,
+				C851124D2983861200FC35B4 /* CategoryListViewTableViewCell.xib */,
+			);
+			path = CategoryListView;
 			sourceTree = "<group>";
 		};
 		C8A23B23297F862F003E4B86 = {
@@ -137,6 +152,7 @@
 			children = (
 				C8A23B33297F862F003E4B86 /* HomeViewController.swift */,
 				C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */,
+				C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		C8A23B4A297F96A7003E4B86 /* CustomViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C85112442983847200FC35B4 /* CategoryListView */,
 				C8A23B51297F971F003E4B86 /* ChefSpecialCollectionViewCell */,
 				C8A23B50297F9702003E4B86 /* PopularDishesCollectionViewCell */,
 				C8A23B4F297F96EE003E4B86 /* FoodCategoryCollectionViewCell */,
@@ -197,8 +214,8 @@
 		C8A23B5F29803777003E4B86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C8A23B60298037E2003E4B86 /* DishCategory.swift */,
-				C8A23B62298037F4003E4B86 /* PopularDish.swift */,
+				C8A23B60298037E2003E4B86 /* FoodCategory.swift */,
+				C8A23B62298037F4003E4B86 /* Food.swift */,
 				C8A23B642980380B003E4B86 /* SpecialDish.swift */,
 			);
 			path = Models;
@@ -273,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A23B4E297F96E4003E4B86 /* FoodCategoryCollectionViewCell.xib in Resources */,
+				C851124F2983861200FC35B4 /* CategoryListViewTableViewCell.xib in Resources */,
 				C8A23B57297F9764003E4B86 /* PopularDishesCollectionViewCell.xib in Resources */,
 				C8A23B3C297F8631003E4B86 /* LaunchScreen.storyboard in Resources */,
 				C8A23B39297F8631003E4B86 /* Assets.xcassets in Resources */,
@@ -333,14 +351,16 @@
 				C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */,
 				C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */,
 				C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */,
+				C851125129838DF200FC35B4 /* FoodCategoryListViewController.swift in Sources */,
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
 				C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */,
 				C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */,
 				C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */,
-				C8A23B61298037E2003E4B86 /* DishCategory.swift in Sources */,
+				C8A23B61298037E2003E4B86 /* FoodCategory.swift in Sources */,
 				C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */,
-				C8A23B63298037F4003E4B86 /* PopularDish.swift in Sources */,
+				C851124E2983861200FC35B4 /* CategoryListViewTableViewCell.swift in Sources */,
+				C8A23B63298037F4003E4B86 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

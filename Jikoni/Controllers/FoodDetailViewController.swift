@@ -11,6 +11,7 @@ import Kingfisher
 /// Class that displays the selected food details
 class FoodDetailViewController: UIViewController {
     
+    // MARK: - Collection view outlets
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodCalories: UILabel!
@@ -22,7 +23,7 @@ class FoodDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Details"
         populateFields()
     }
     

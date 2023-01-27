@@ -16,18 +16,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var chefSpecialCategoryCollectionView: UICollectionView!
     
     // Food categories values
-    var foodCategories: [DishCategory] = [
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200")
+    var foodCategories: [FoodCategory] = [
+        .init(id: "id1", name: "Food1", image: "https://picsum.photos/100/200"),
+        .init(id: "id1", name: "Food2", image: "https://picsum.photos/100/200"),
+        .init(id: "id1", name: "Food3", image: "https://picsum.photos/100/200"),
+        .init(id: "id1", name: "Food4", image: "https://picsum.photos/100/200"),
+        .init(id: "id1", name: "Food5", image: "https://picsum.photos/100/200"),
+        .init(id: "id1", name: "Food6", image: "https://picsum.photos/100/200")
     ]
     
     // Popular dishes values
     var popularDishes: [Food] = [
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
         .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
         .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
         .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
@@ -129,7 +129,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Select an item on food category to see a list of food items
         if collectionView == foodCategoryCollectionView {
-            // do something else
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "FoodCategoryListViewController") as! FoodCategoryListViewController
+            controller.category = foodCategories[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
         } else {
             // Select the other two view controllers to see the details for each food
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
