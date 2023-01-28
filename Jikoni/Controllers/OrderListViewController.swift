@@ -46,4 +46,12 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(order: orders[indexPath.row])
         return cell
     }
+    
+    // What happens when a cell is selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
+        // Populates the detail view with data from the order page
+        controller.selectedFood = orders[indexPath.row].food
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
