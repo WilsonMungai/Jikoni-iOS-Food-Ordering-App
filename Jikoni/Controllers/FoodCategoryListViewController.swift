@@ -9,9 +9,11 @@ import UIKit
 
 class FoodCategoryListViewController: UIViewController {
     
-    // MARK: - Collection view outlets
+    // MARK: - Table view outlet
     @IBOutlet weak var tableView: UITableView!
+    
     var category: FoodCategory!
+    
     var categories: [Food] = [
         .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
         .init(id: "id1", name: "Mchele", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
@@ -40,10 +42,12 @@ class FoodCategoryListViewController: UIViewController {
 }
 
 extension FoodCategoryListViewController: UITableViewDelegate, UITableViewDataSource {
+    // Returns the number of items 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
 
+    // Adds data to a cell in the table view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CategoryListViewTableViewCell.cellIdentifier,
                                                  for: indexPath) as! CategoryListViewTableViewCell
