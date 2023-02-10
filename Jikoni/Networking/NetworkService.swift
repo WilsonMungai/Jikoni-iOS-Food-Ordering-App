@@ -9,6 +9,15 @@ import Foundation
 
 struct NetworkService {
     
+    // Singleton
+    static let shared = NetworkService()
+    
+    // Make init private so as to prevent creating an instance of this classs
+    private init() {}
+    
+    func fetchAllCategories(completion: @escaping(Result<AllCategories, Error>) -> Void) {
+        request(route: .fecthAllCategiogies, method: .get, completion: completion)
+    }
     
     // MARK: - Private functions
     
@@ -42,7 +51,13 @@ struct NetworkService {
                 // Retrieve the localized description for this error
                 print("The error is: \(error.localizedDescription)")
             }
+            
+            DispatchQueue.main.async {
+                // TODO: decode the results and send back to the user
+                self.handleResponse(result: result, completion: completion)
+            }
         }
+        .resume()
     }
     
     // URL Request

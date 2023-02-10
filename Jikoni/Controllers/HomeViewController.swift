@@ -17,30 +17,30 @@ class HomeViewController: UIViewController {
     
     // Food categories values
     var foodCategories: [FoodCategory] = [
-        .init(id: "id1", name: "Food1", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Food2", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Food3", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Food4", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Food5", image: "https://picsum.photos/100/200"),
-        .init(id: "id1", name: "Food6", image: "https://picsum.photos/100/200")
+//        .init(id: "id1", name: "Food1", image: "https://picsum.photos/100/200"),
+//        .init(id: "id1", name: "Food2", image: "https://picsum.photos/100/200"),
+//        .init(id: "id1", name: "Food3", image: "https://picsum.photos/100/200"),
+//        .init(id: "id1", name: "Food4", image: "https://picsum.photos/100/200"),
+//        .init(id: "id1", name: "Food5", image: "https://picsum.photos/100/200"),
+//        .init(id: "id1", name: "Food6", image: "https://picsum.photos/100/200")
     ]
     
     // Popular dishes values
     var popularDishes: [Food] = [
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
     ]
     
     var special: [Food] = [
-        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200)
+//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
+//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200)
     ]
     
     override func viewDidLoad() {
@@ -61,6 +61,22 @@ class HomeViewController: UIViewController {
         registerCell()
         
         title = "Jikoni"
+        
+        NetworkService.shared.fetchAllCategories { [weak self] result in
+            switch result {
+            case .success(let allCategories):
+                self?.foodCategories = allCategories.categories ?? []
+                self?.popularDishes = allCategories.populars ?? []
+                self?.special = allCategories.specials ?? []
+                
+                self?.foodCategoryCollectionView.reloadData()
+                self?.popularDishesCategoryCollectionView.reloadData()
+                self?.chefSpecialCategoryCollectionView.reloadData()
+                
+            case .failure(let failure):
+                print("Fatal error \(failure)")
+            }
+        }
     }
     
     // MARK: - Cell Registration

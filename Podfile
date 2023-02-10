@@ -7,5 +7,6 @@ target 'Jikoni' do
 
   # Pods for Jikoni
   pod "Kingfisher"
+  pod "ProgressHUD"
     
 end
