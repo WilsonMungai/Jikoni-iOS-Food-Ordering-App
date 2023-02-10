@@ -52,6 +52,6 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
         let controller = storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
         // Populates the detail view with data from the order page
         controller.selectedFood = orders[indexPath.row].food
-        navigationController?.pushViewController(controller, animated: true)
+        show(controller, sender: self)
     }
 }

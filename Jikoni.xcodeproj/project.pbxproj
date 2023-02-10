@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		69D3BC6E13294CCB89232F35 /* Pods_Jikoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */; };
+		C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8C2996909700E5BF76 /* APIResponse.swift */; };
+		C84B2A8F299690A500E5BF76 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8E299690A500E5BF76 /* AppError.swift */; };
+		C84B2A91299690B600E5BF76 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A90299690B600E5BF76 /* Route.swift */; };
+		C84B2A93299690C700E5BF76 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A92299690C700E5BF76 /* Method.swift */; };
+		C84B2A95299690DB00E5BF76 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A94299690DB00E5BF76 /* NetworkService.swift */; };
+		C84B2A972996A87100E5BF76 /* AllCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A962996A87100E5BF76 /* AllCategories.swift */; };
 		C851124E2983861200FC35B4 /* CategoryListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851124C2983861200FC35B4 /* CategoryListViewTableViewCell.swift */; };
 		C851124F2983861200FC35B4 /* CategoryListViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C851124D2983861200FC35B4 /* CategoryListViewTableViewCell.xib */; };
 		C851125129838DF200FC35B4 /* FoodCategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */; };
@@ -35,6 +41,12 @@
 /* Begin PBXFileReference section */
 		2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jikoni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.release.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.release.xcconfig"; sourceTree = "<group>"; };
+		C84B2A8C2996909700E5BF76 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		C84B2A8E299690A500E5BF76 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		C84B2A90299690B600E5BF76 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		C84B2A92299690C700E5BF76 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		C84B2A94299690DB00E5BF76 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C84B2A962996A87100E5BF76 /* AllCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategories.swift; sourceTree = "<group>"; };
 		C851124C2983861200FC35B4 /* CategoryListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewTableViewCell.swift; sourceTree = "<group>"; };
 		C851124D2983861200FC35B4 /* CategoryListViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewTableViewCell.xib; sourceTree = "<group>"; };
 		C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryListViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +103,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C84B2A8B29968E1100E5BF76 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C84B2A8C2996909700E5BF76 /* APIResponse.swift */,
+				C84B2A8E299690A500E5BF76 /* AppError.swift */,
+				C84B2A90299690B600E5BF76 /* Route.swift */,
+				C84B2A92299690C700E5BF76 /* Method.swift */,
+				C84B2A94299690DB00E5BF76 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		C85112442983847200FC35B4 /* CategoryListView */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +145,7 @@
 		C8A23B2E297F862F003E4B86 /* Jikoni */ = {
 			isa = PBXGroup;
 			children = (
+				C84B2A8B29968E1100E5BF76 /* Networking */,
 				C8A23B5F29803777003E4B86 /* Models */,
 				C8A23B4A297F96A7003E4B86 /* CustomViewCells */,
 				C8A23B48297F86E6003E4B86 /* Views */,
@@ -223,6 +248,7 @@
 				C8A23B62298037F4003E4B86 /* Food.swift */,
 				C8A23B642980380B003E4B86 /* SpecialDish.swift */,
 				C851125A2984BDA200FC35B4 /* Order.swift */,
+				C84B2A962996A87100E5BF76 /* AllCategories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,15 +384,21 @@
 				C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */,
 				C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */,
 				C85112592984BCD800FC35B4 /* OrderListViewController.swift in Sources */,
+				C84B2A8F299690A500E5BF76 /* AppError.swift in Sources */,
 				C851125129838DF200FC35B4 /* FoodCategoryListViewController.swift in Sources */,
+				C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */,
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
+				C84B2A91299690B600E5BF76 /* Route.swift in Sources */,
+				C84B2A95299690DB00E5BF76 /* NetworkService.swift in Sources */,
+				C84B2A93299690C700E5BF76 /* Method.swift in Sources */,
 				C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */,
 				C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */,
 				C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */,
 				C8A23B61298037E2003E4B86 /* FoodCategory.swift in Sources */,
 				C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */,
 				C851125B2984BDA200FC35B4 /* Order.swift in Sources */,
+				C84B2A972996A87100E5BF76 /* AllCategories.swift in Sources */,
 				C851124E2983861200FC35B4 /* CategoryListViewTableViewCell.swift in Sources */,
 				C8A23B63298037F4003E4B86 /* Food.swift in Sources */,
 			);

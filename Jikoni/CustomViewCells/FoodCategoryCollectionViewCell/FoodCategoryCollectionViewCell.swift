@@ -24,8 +24,8 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Setup function
     // Function that takes dish as a param of type DishCategory to assign the struct values to the cell
-    func setup(dish: FoodCategory) {
-        foodNameLabel.text = dish.name
-        foodImageLabel.kf.setImage(with: dish.image?.asUrl)
+    func setup(category: FoodCategory) {
+        foodNameLabel.text = category.name
+        foodImageLabel.kf.setImage(with: category.image?.asUrl)
     }
 }

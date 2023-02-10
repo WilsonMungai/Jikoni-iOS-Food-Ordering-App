@@ -58,6 +58,6 @@ extension FoodCategoryListViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
         controller.selectedFood = categories[indexPath.row]
-        navigationController?.pushViewController(controller, animated: true)
+        show(controller, sender: self)
     }
 }

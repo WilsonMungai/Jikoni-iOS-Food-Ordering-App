@@ -8,8 +8,16 @@
 import UIKit
 
 // Dish category data structure
-struct FoodCategory {
+struct FoodCategory: Decodable {
     let id: String?
     let name: String?
     let image: String?
+    
+    // The keys in our project may be defined differently from what we have in the backend
+    // The backend looks like this "title" but in the project it is defined like this name
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name = "title"
+        case image
+    }
 }

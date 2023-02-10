@@ -105,7 +105,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             // Inflating food category collection view cell
         case foodCategoryCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCategoryCollectionViewCell.cellIdentifier, for: indexPath) as! FoodCategoryCollectionViewCell
-            cell.setup(dish: foodCategories[indexPath.row])
+            cell.setup(category: foodCategories[indexPath.row])
             return cell
             
             // Inflating popular dishes category collection view cell
@@ -131,7 +131,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == foodCategoryCollectionView {
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "FoodCategoryListViewController") as! FoodCategoryListViewController
             controller.category = foodCategories[indexPath.row]
-            navigationController?.pushViewController(controller, animated: true)
+            show(controller, sender: self)
         } else {
             // Select the other two view controllers to see the details for each food
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
@@ -147,7 +147,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 
             default: return
             }
-            navigationController?.pushViewController(controller, animated: true)
+            show(controller, sender: self)
         }
     }
     
