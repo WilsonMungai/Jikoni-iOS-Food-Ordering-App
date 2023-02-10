@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import ProgressHUD
 
 /// Class that displays the selected food details
 class FoodDetailViewController: UIViewController {
@@ -38,6 +39,22 @@ class FoodDetailViewController: UIViewController {
     
     // Order button
     @IBAction func orderButtonTapped(_ sender: UIButton) {
+        
+        guard let name = nameField.text?.trimmingCharacters(in: .whitespaces),
+              !name.isEmpty else {
+            ProgressHUD.show("Whooops!! \n Please Enter Your Name!")
+            return
+        }
+        ProgressHUD.show("Placing Your Order...")
+        NetworkService.shared.placeOrder(dishId: selectedFood.id ?? "", name: name) { result in
+            switch result {
+            case .success(_):
+                ProgressHUD.showSuccess("Hurray!👩‍🍳 \n Your order has been received")
+            case .failure(let error):
+                ProgressHUD.show(error.localizedDescription)
+            }
+            
+        }
     }
     
 }

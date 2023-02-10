@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class OrderListViewController: UIViewController {
 
@@ -13,9 +14,9 @@ class OrderListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var orders: [Order] = [
-        .init(id: "id1", name: "Wilson Mungai", food: .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100)),
-        .init(id: "id2", name: "Cheryl Wangui", food: .init(id: "id1", name: "Pilay", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100)),
-        .init(id: "id3", name: "Ilyne Wanjiru", food: .init(id: "id1", name: "Chapati", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100)),
+//        .init(id: "id1", name: "Wilson Mungai", food: .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100)),
+//        .init(id: "id2", name: "Cheryl Wangui", food: .init(id: "id1", name: "Pilay", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100)),
+//        .init(id: "id3", name: "Ilyne Wanjiru", food: .init(id: "id1", name: "Chapati", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100)),
     ]
     
     override func viewDidLoad() {
@@ -26,6 +27,8 @@ class OrderListViewController: UIViewController {
         tableView.dataSource = self
         
         registerCell()
+        
+        ProgressHUD.show()
     }
     
     // Cell registration

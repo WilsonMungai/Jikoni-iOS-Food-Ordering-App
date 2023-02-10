@@ -15,8 +15,25 @@ struct NetworkService {
     // Make init private so as to prevent creating an instance of this classs
     private init() {}
     
+    // Fetch the 3 categories on the main screen
     func fetchAllCategories(completion: @escaping(Result<AllCategories, Error>) -> Void) {
         request(route: .fecthAllCategiogies, method: .get, completion: completion)
+    }
+    
+    // Fetch the various categories
+    func fetchFoodCategories(categoryId: String, completion: @escaping(Result<[Food], Error>) -> Void) {
+        request(route: .fetchCategoryDishes(categoryId), method: .get, completion: completion)
+    }
+    
+    // Place an order
+    func placeOrder(dishId: String, name: String, completion: @escaping(Result<Order, Error>) -> Void) {
+        let params = ["name": name]
+        request(route: .placeOrder(dishId), method: .post,parameters: params,completion: completion)
+    }
+    
+    
+    func fetchOrders(completion: @escaping(Result<Order, Error>) -> Void) {
+        request(route: .fetchOrders, method: .get, completion: completion)
     }
     
     // MARK: - Private functions

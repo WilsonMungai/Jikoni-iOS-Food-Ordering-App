@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class FoodCategoryListViewController: UIViewController {
     
@@ -15,12 +16,12 @@ class FoodCategoryListViewController: UIViewController {
     var category: FoodCategory!
     
     var categories: [Food] = [
-        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Mchele", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Pilau", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Mboga", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Chai", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-        .init(id: "id1", name: "Sambusa", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Mchele", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Pilau", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Mboga", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Chai", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
+//        .init(id: "id1", name: "Sambusa", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
     ]
     
     override func viewDidLoad() {
@@ -30,8 +31,21 @@ class FoodCategoryListViewController: UIViewController {
         tableView.dataSource = self
         
         title = category.name
-        
+       
         registerCell()
+        
+        ProgressHUD.show()
+        
+        NetworkService.shared.fetchFoodCategories(categoryId: category.id ?? "") { [weak self] (result) in
+            switch result {
+            case .success(let dish):
+                ProgressHUD.dismiss()
+                self?.categories = dish
+                self?.tableView.reloadData()
+            case .failure(let error):
+                ProgressHUD.show(error.localizedDescription)
+            }
+        }
     }
     
     // MARK: - Cell Registration

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
     // Color fb8500
@@ -60,11 +61,15 @@ class HomeViewController: UIViewController {
         
         registerCell()
         
+        // Show progress bar
+        ProgressHUD.show()
+        
         title = "Jikoni"
         
         NetworkService.shared.fetchAllCategories { [weak self] result in
             switch result {
             case .success(let allCategories):
+                ProgressHUD.dismiss()
                 self?.foodCategories = allCategories.categories ?? []
                 self?.popularDishes = allCategories.populars ?? []
                 self?.special = allCategories.specials ?? []
@@ -73,8 +78,9 @@ class HomeViewController: UIViewController {
                 self?.popularDishesCategoryCollectionView.reloadData()
                 self?.chefSpecialCategoryCollectionView.reloadData()
                 
-            case .failure(let failure):
-                print("Fatal error \(failure)")
+            case .failure(let error):
+                ProgressHUD.show(error.localizedDescription)
+//                print("Fatal error \(error.localizedDescription)")
             }
         }
     }
