@@ -28,12 +28,13 @@ class FoodDetailViewController: UIViewController {
         populateFields()
     }
     
-    // Function that populates the cells with data from the home view controller
+    // Function that populates the cells with data from the view controller pushing data here
     private func populateFields() {
-        foodName.text = selectedFood.name
-        foodImageView.kf.setImage(with: selectedFood.image?.asUrl)
-        foodCalories.text = selectedFood.formattedCalories
-        foodDescription.text = selectedFood.description
+        foodImageView.kf.setImage(with: selectedFood?.image?.asUrl)
+        foodName.text = selectedFood?.name
+//        print("ordered foof is \(selectedFood?.name ?? "milk" )")
+        foodCalories.text = selectedFood?.formattedCalories
+        foodDescription.text = selectedFood?.description
     }
     
     
@@ -42,11 +43,12 @@ class FoodDetailViewController: UIViewController {
         
         guard let name = nameField.text?.trimmingCharacters(in: .whitespaces),
               !name.isEmpty else {
-            ProgressHUD.show("Whooops!! \n Please Enter Your Name!")
+            ProgressHUD.showError("Whooops!! \n Please Enter Your Name!")
             return
         }
+        print(name)
         ProgressHUD.show("Placing Your Order...")
-        NetworkService.shared.placeOrder(dishId: selectedFood.id ?? "", name: name) { result in
+        NetworkService.shared.placeOrder(dishId: selectedFood.id ?? "", name: name) { (result) in
             switch result {
             case .success(_):
                 ProgressHUD.showSuccess("Hurray!👩‍🍳 \n Your order has been received")

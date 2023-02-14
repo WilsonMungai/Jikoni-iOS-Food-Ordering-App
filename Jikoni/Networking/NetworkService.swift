@@ -26,16 +26,24 @@ struct NetworkService {
     }
     
     // Place an order
-    func placeOrder(dishId: String, name: String, completion: @escaping(Result<Order, Error>) -> Void) {
+//    func placeOrder(dishId: String, name: String, completion: @escaping(Result<Order, Error>) -> Void) {
+//        let params = ["name": name]
+//        request(route: .placeOrder(dishId), method: .post,parameters: params,completion: completion)
+//    }
+    
+    func placeOrder(dishId: String,name: String, completion: @escaping(Result<Order, Error>) -> Void) {
         let params = ["name": name]
-        request(route: .placeOrder(dishId), method: .post,parameters: params,completion: completion)
+        request(route: .placeOrder(dishId), method: .post, parameters: params, completion: completion)
     }
     
+    // Fetch orders placed
+//    func fetchOrders(completion: @escaping(Result<[Order], Error>) -> Void) {
+//        request(route: .fetchOrders, method: .get, completion: completion)
+//    }
     
-    func fetchOrders(completion: @escaping(Result<Order, Error>) -> Void) {
+    func fecthOrders(completion: @escaping(Result<[Order], Error>) -> Void) {
         request(route: .fetchOrders, method: .get, completion: completion)
     }
-    
     // MARK: - Private functions
     
     /// Make request
@@ -62,7 +70,8 @@ struct NetworkService {
             if let data = data {
                 result = .success(data)
                 // Convert the data to string and print
-                let responseString = String(data: data, encoding: .utf8) ?? "Couldn't springify our data"
+                let responseString = String(data: data, encoding: .utf8) ?? "Couldn't springify the data"
+                print("The response is : \n \(responseString)")
             } else if let error = error {
                 result = .failure(error)
                 // Retrieve the localized description for this error

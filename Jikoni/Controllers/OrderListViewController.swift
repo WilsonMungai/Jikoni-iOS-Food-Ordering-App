@@ -21,6 +21,7 @@ class OrderListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Orders"
         
         tableView.delegate = self
@@ -31,12 +32,26 @@ class OrderListViewController: UIViewController {
         ProgressHUD.show()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        NetworkService.shared.fecthOrders { [weak self] (result) in
+            switch result {
+            case .success(let orders):
+                ProgressHUD.dismiss()
+                self?.orders = orders
+                self?.tableView.reloadData()
+            case .failure(let error):
+                ProgressHUD.show(error.localizedDescription)
+            }
+        }
+    }
+    
     // Cell registration
     private func registerCell() {
         tableView.register(UINib(nibName: CategoryListViewTableViewCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: CategoryListViewTableViewCell.cellIdentifier)
     }
 }
 
+// MARK: - Extension
 extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
     // Returns the number of items 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,10 +66,19 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // What happens when a cell is selected
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
+//        // Populates the detail view with data from the order page
+//        controller.selectedFood = orders[indexPath.row].food
+//        navigationController?.pushViewController(controller, animated: true)
+//        show(controller, sender: self)
+//    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
-        // Populates the detail view with data from the order page
+        let controller = FoodDetailViewController.instantiate()
+//        controller.selectedFood = orders[indexPath.row].food
         controller.selectedFood = orders[indexPath.row].food
-        show(controller, sender: self)
+        navigationController?.pushViewController(controller, animated: true)
+//        show(controller, sender: self)
     }
 }
