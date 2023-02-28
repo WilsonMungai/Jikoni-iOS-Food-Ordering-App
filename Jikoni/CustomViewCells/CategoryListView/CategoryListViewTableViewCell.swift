@@ -20,15 +20,15 @@ class CategoryListViewTableViewCell: UITableViewCell {
     
     // MARK: - Setup function
     // Function that takes specialDish as a param of type SpecialDish to assign the struct values to the cell
-    func setup(category: Food) {
+    func setup(category: Dish) {
         dishImageView.kf.setImage(with: category.image?.asUrl)
         dishName.text = category.name
         dishDescription.text = category.description
     }
     
-    func setup(order: Order) {
-        dishImageView.kf.setImage(with: order.food?.image?.asUrl)
-        dishName.text = order.food?.name
+    func setup(order: Orders) {
+        dishImageView.kf.setImage(with: order.dish?.image?.asUrl)
+        dishName.text = order.dish?.name
         dishDescription.text = order.name
     }
 }

@@ -8,10 +8,10 @@
 import Foundation
 
 enum Route {
-    // server address for our backend, where the backend is being hosted
+    // this is the server address for our backend, where the backend is being hosted
     static let baseUrl = "https://yummie.glitch.me"
     
-    // Fetching data to display on the ui
+    // Fetchoing data to display on the ui
     case fecthAllCategiogies
     
     // place order end point
@@ -21,7 +21,7 @@ enum Route {
     // fetchCategoryDished
     case fetchCategoryDishes(String)
     
-    // Fetch orders
+    // Fetch  orders
     case fetchOrders
     
 //    case temp
@@ -43,3 +43,4 @@ enum Route {
         }
     }
 }
+

@@ -236,7 +236,7 @@
                                             <color key="baseForegroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="orderButtonTapped:" destination="qoG-hM-P26" eventType="touchUpInside" id="j1J-ek-seW"/>
+                                            <action selector="orderButtonTapped:" destination="qoG-hM-P26" eventType="touchUpInside" id="cTn-JZ-Jt4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -269,7 +269,7 @@
         <!--Order List View Controller-->
         <scene sceneID="poX-58-5jk">
             <objects>
-                <viewController id="q4j-Zq-kak" customClass="OrderListViewController" customModule="Jikoni" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderListViewController" id="q4j-Zq-kak" customClass="OrderListViewController" customModule="Jikoni" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dst-ED-e3O">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -20,7 +20,7 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     
     // Holds the selected food values
-    var selectedFood: Food!
+    var selectedFood: Dish!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,11 @@ class FoodDetailViewController: UIViewController {
     
     // Function that populates the cells with data from the view controller pushing data here
     private func populateFields() {
-        foodImageView.kf.setImage(with: selectedFood?.image?.asUrl)
-        foodName.text = selectedFood?.name
-//        print("ordered foof is \(selectedFood?.name ?? "milk" )")
-        foodCalories.text = selectedFood?.formattedCalories
-        foodDescription.text = selectedFood?.description
+        foodImageView.kf.setImage(with: selectedFood.image?.asUrl)
+        foodName.text = selectedFood.name
+        print("ordered food is \(selectedFood?.name ?? "" )")
+        foodCalories.text = selectedFood.formattedCalories
+        foodDescription.text = selectedFood.description
     }
     
     

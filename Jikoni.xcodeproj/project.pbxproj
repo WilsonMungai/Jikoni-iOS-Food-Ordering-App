@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		69D3BC6E13294CCB89232F35 /* Pods_Jikoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */; };
+		C81CD5DC29AE5FEB00BF1572 /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CD5DA29AE5FEB00BF1572 /* OrderListTableViewCell.swift */; };
+		C81CD5DD29AE5FEB00BF1572 /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81CD5DB29AE5FEB00BF1572 /* OrderListTableViewCell.xib */; };
 		C83B9EF3299B535D008EB74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B9EF2299B535D008EB74C /* ViewController.swift */; };
 		C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8C2996909700E5BF76 /* APIResponse.swift */; };
 		C84B2A8F299690A500E5BF76 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8E299690A500E5BF76 /* AppError.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jikoni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.release.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.release.xcconfig"; sourceTree = "<group>"; };
+		C81CD5DA29AE5FEB00BF1572 /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
+		C81CD5DB29AE5FEB00BF1572 /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
 		C83B9EF2299B535D008EB74C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C84B2A8C2996909700E5BF76 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		C84B2A8E299690A500E5BF76 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -105,12 +109,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C83B9EF1299B533D008EB74C /* Extensions */ = {
+		C81CD5D929AE5FC400BF1572 /* OrderListViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C83B9EF2299B535D008EB74C /* ViewController.swift */,
+				C81CD5DA29AE5FEB00BF1572 /* OrderListTableViewCell.swift */,
+				C81CD5DB29AE5FEB00BF1572 /* OrderListTableViewCell.xib */,
 			);
-			path = Extensions;
+			path = OrderListViewCell;
 			sourceTree = "<group>";
 		};
 		C84B2A8B29968E1100E5BF76 /* Networking */ = {
@@ -155,7 +160,6 @@
 		C8A23B2E297F862F003E4B86 /* Jikoni */ = {
 			isa = PBXGroup;
 			children = (
-				C83B9EF1299B533D008EB74C /* Extensions */,
 				C84B2A8B29968E1100E5BF76 /* Networking */,
 				C8A23B5F29803777003E4B86 /* Models */,
 				C8A23B4A297F96A7003E4B86 /* CustomViewCells */,
@@ -217,6 +221,7 @@
 		C8A23B4A297F96A7003E4B86 /* CustomViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C81CD5D929AE5FC400BF1572 /* OrderListViewCell */,
 				C85112442983847200FC35B4 /* CategoryListView */,
 				C8A23B51297F971F003E4B86 /* ChefSpecialCollectionViewCell */,
 				C8A23B50297F9702003E4B86 /* PopularDishesCollectionViewCell */,
@@ -267,6 +272,7 @@
 		C8B019F429804237003C2BE9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C83B9EF2299B535D008EB74C /* ViewController.swift */,
 				C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */,
 			);
 			path = Extensions;
@@ -338,6 +344,7 @@
 				C8A23B3C297F8631003E4B86 /* LaunchScreen.storyboard in Resources */,
 				C8A23B39297F8631003E4B86 /* Assets.xcassets in Resources */,
 				C8A23B5E297F9794003E4B86 /* ChefSpecialCollectionViewCell.xib in Resources */,
+				C81CD5DD29AE5FEB00BF1572 /* OrderListTableViewCell.xib in Resources */,
 				C8A23B37297F862F003E4B86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +408,7 @@
 				C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */,
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
+				C81CD5DC29AE5FEB00BF1572 /* OrderListTableViewCell.swift in Sources */,
 				C84B2A91299690B600E5BF76 /* Route.swift in Sources */,
 				C84B2A95299690DB00E5BF76 /* NetworkService.swift in Sources */,
 				C84B2A93299690C700E5BF76 /* Method.swift in Sources */,

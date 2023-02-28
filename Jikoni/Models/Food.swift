@@ -8,7 +8,7 @@
 import UIKit
 
 // Popular dishes data structure
-struct Food: Decodable {
+struct Dish: Decodable {
     let id: String?
     let name: String?
     let image: String?

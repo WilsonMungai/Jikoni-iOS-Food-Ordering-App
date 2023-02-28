@@ -15,7 +15,7 @@ class FoodCategoryListViewController: UIViewController {
     
     var category: FoodCategory!
     
-    var categories: [Food] = [
+    var categories: [Dish] = [
 //        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
 //        .init(id: "id1", name: "Mchele", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
 //        .init(id: "id1", name: "Pilau", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
