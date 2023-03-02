@@ -39,6 +39,7 @@
 		C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A23B642980380B003E4B86 /* SpecialDish.swift */; };
 		C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */; };
 		C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */; };
+		C8B4EFB229B1655200B81E4D /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B4EFB129B1655200B81E4D /* OrderDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		C8A23B642980380B003E4B86 /* SpecialDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDish.swift; sourceTree = "<group>"; };
 		C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherStringExtension.swift; sourceTree = "<group>"; };
 		C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		C8B4EFB129B1655200B81E4D /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		F7B11418D3A62280724E769E /* Pods-Jikoni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.debug.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 				C8B019FE2980C2D5003C2BE9 /* FoodDetailViewController.swift */,
 				C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */,
 				C85112582984BCD700FC35B4 /* OrderListViewController.swift */,
+				C8B4EFB129B1655200B81E4D /* OrderDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				C84B2A8F299690A500E5BF76 /* AppError.swift in Sources */,
 				C851125129838DF200FC35B4 /* FoodCategoryListViewController.swift in Sources */,
 				C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */,
+				C8B4EFB229B1655200B81E4D /* OrderDetailsViewController.swift in Sources */,
 				C8A23B4D297F96E4003E4B86 /* FoodCategoryCollectionViewCell.swift in Sources */,
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
 				C81CD5DC29AE5FEB00BF1572 /* OrderListTableViewCell.swift in Sources */,

@@ -65,10 +65,17 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        let controller = FoodDetailViewController.instantiate()
+//        controller.selectedFood = orders[indexPath.row].dish
+//        navigationController?.pushViewController(controller, animated: true)
+//    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let controller = FoodDetailViewController.instantiate()
+        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "OrderDetailsViewController") as? OrderDetailsViewController else {return}
         controller.selectedFood = orders[indexPath.row].dish
-        navigationController?.pushViewController(controller, animated: true)
+        show(controller, sender: self)
     }
 }

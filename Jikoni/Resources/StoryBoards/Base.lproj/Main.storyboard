@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FuI-Y6-urm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511.1627906976744" y="4.5064377682403434"/>
+            <point key="canvasLocation" x="1545" y="-375"/>
         </scene>
         <!--Order List View Controller-->
         <scene sceneID="poX-58-5jk">
@@ -295,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1EY-5k-MCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="717"/>
+            <point key="canvasLocation" x="823" y="944"/>
         </scene>
         <!--Food Category List View Controller-->
         <scene sceneID="TBt-Yk-OFU">
@@ -325,7 +325,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gan-Zr-r7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197.6744186046512" y="3.218884120171674"/>
+            <point key="canvasLocation" x="1545" y="290"/>
+        </scene>
+        <!--Order Details View Controller-->
+        <scene sceneID="bGH-cg-eva">
+            <objects>
+                <viewController storyboardIdentifier="OrderDetailsViewController" id="GCb-nl-frU" customClass="OrderDetailsViewController" customModule="Jikoni" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BM0-o9-CiU">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F3k-jN-u7u">
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J7C-wa-9W9">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="279.66666666666669"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cooking " translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-h7-PYE">
+                                        <rect key="frame" x="0.0" y="279.66666666666663" width="430" height="279.66666666666663"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order is being prepared..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-Dy-E8i">
+                                        <rect key="frame" x="0.0" y="559.33333333333337" width="430" height="279.66666666666663"/>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZBx-Nv-i6E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F3k-jN-u7u" firstAttribute="top" secondItem="ZBx-Nv-i6E" secondAttribute="top" id="5f6-lS-qkO"/>
+                            <constraint firstItem="F3k-jN-u7u" firstAttribute="leading" secondItem="ZBx-Nv-i6E" secondAttribute="leading" id="GDH-e8-KWh"/>
+                            <constraint firstItem="ZBx-Nv-i6E" firstAttribute="trailing" secondItem="F3k-jN-u7u" secondAttribute="trailing" id="HmE-uj-L2i"/>
+                            <constraint firstItem="ZBx-Nv-i6E" firstAttribute="bottom" secondItem="F3k-jN-u7u" secondAttribute="bottom" id="zLZ-lo-S0e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="orderImage" destination="J7C-wa-9W9" id="O1q-FW-5Gb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gi-n7-cSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7dl-4w-bv5">
@@ -348,6 +391,7 @@
     </scenes>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="cooking " width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
