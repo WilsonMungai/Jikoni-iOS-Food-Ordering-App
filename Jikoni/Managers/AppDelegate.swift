@@ -19,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Remove the navigation bar shadow
         UINavigationBar.appearance().shadowImage = UIImage()
         // Makes the tint colour black
-        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().tintColor = .secondaryLabel
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
         return true
     }
 
