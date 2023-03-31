@@ -28,7 +28,7 @@ class CategoryListViewTableViewCell: UITableViewCell {
     
     func setup(order: Orders) {
         dishImageView.kf.setImage(with: order.dish?.image?.asUrl)
-        dishName.text = order.dish?.name
-        dishDescription.text = order.name
+        dishDescription.text = order.dish?.name
+        dishName.text = order.name
     }
 }
