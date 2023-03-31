@@ -8,5 +8,6 @@ target 'Jikoni' do
   # Pods for Jikoni
   pod "Kingfisher"
   pod "ProgressHUD"
+  pod "IQKeyboardManagerSwift"
     
 end

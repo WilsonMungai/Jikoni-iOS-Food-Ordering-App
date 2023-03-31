@@ -10,7 +10,12 @@
 		69D3BC6E13294CCB89232F35 /* Pods_Jikoni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F055389BBD57F2F636FF771 /* Pods_Jikoni.framework */; };
 		C81CD5DC29AE5FEB00BF1572 /* OrderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CD5DA29AE5FEB00BF1572 /* OrderListTableViewCell.swift */; };
 		C81CD5DD29AE5FEB00BF1572 /* OrderListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81CD5DB29AE5FEB00BF1572 /* OrderListTableViewCell.xib */; };
+		C83750D929D6628F00EE8671 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750D829D6628F00EE8671 /* OnboardingViewController.swift */; };
+		C83750DB29D6657800EE8671 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750DA29D6657800EE8671 /* Onboarding.swift */; };
+		C83750DE29D668F900EE8671 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750DD29D668F900EE8671 /* OnboardingCollectionViewCell.swift */; };
+		C83750E029D748E200EE8671 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750DF29D748E200EE8671 /* CardView.swift */; };
 		C83B9EF3299B535D008EB74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B9EF2299B535D008EB74C /* ViewController.swift */; };
+		C83D121829B6815D00238B82 /* viewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D121729B6815D00238B82 /* viewExtension.swift */; };
 		C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8C2996909700E5BF76 /* APIResponse.swift */; };
 		C84B2A8F299690A500E5BF76 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8E299690A500E5BF76 /* AppError.swift */; };
 		C84B2A91299690B600E5BF76 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A90299690B600E5BF76 /* Route.swift */; };
@@ -47,7 +52,12 @@
 		AA9EAFE58E5636115D166F29 /* Pods-Jikoni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jikoni.release.xcconfig"; path = "Target Support Files/Pods-Jikoni/Pods-Jikoni.release.xcconfig"; sourceTree = "<group>"; };
 		C81CD5DA29AE5FEB00BF1572 /* OrderListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableViewCell.swift; sourceTree = "<group>"; };
 		C81CD5DB29AE5FEB00BF1572 /* OrderListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListTableViewCell.xib; sourceTree = "<group>"; };
+		C83750D829D6628F00EE8671 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		C83750DA29D6657800EE8671 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		C83750DD29D668F900EE8671 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		C83750DF29D748E200EE8671 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C83B9EF2299B535D008EB74C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C83D121729B6815D00238B82 /* viewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtension.swift; sourceTree = "<group>"; };
 		C84B2A8C2996909700E5BF76 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		C84B2A8E299690A500E5BF76 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		C84B2A90299690B600E5BF76 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -120,6 +130,14 @@
 			path = OrderListViewCell;
 			sourceTree = "<group>";
 		};
+		C83750DC29D668BE00EE8671 /* OnboardingViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C83750DD29D668F900EE8671 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = OnboardingViewCell;
+			sourceTree = "<group>";
+		};
 		C84B2A8B29968E1100E5BF76 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,13 +180,12 @@
 		C8A23B2E297F862F003E4B86 /* Jikoni */ = {
 			isa = PBXGroup;
 			children = (
+				C8A23B45297F86B5003E4B86 /* Resources */,
+				C8A23B46297F86BF003E4B86 /* Managers */,
 				C84B2A8B29968E1100E5BF76 /* Networking */,
 				C8A23B5F29803777003E4B86 /* Models */,
-				C8A23B4A297F96A7003E4B86 /* CustomViewCells */,
 				C8A23B48297F86E6003E4B86 /* Views */,
 				C8A23B47297F86D9003E4B86 /* Controllers */,
-				C8A23B46297F86BF003E4B86 /* Managers */,
-				C8A23B45297F86B5003E4B86 /* Resources */,
 				C8A23B3D297F8631003E4B86 /* Info.plist */,
 			);
 			path = Jikoni;
@@ -201,6 +218,7 @@
 				C851125029838DF200FC35B4 /* FoodCategoryListViewController.swift */,
 				C85112582984BCD700FC35B4 /* OrderListViewController.swift */,
 				C8B4EFB129B1655200B81E4D /* OrderDetailsViewController.swift */,
+				C83750D829D6628F00EE8671 /* OnboardingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +226,7 @@
 		C8A23B48297F86E6003E4B86 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C8A23B4A297F96A7003E4B86 /* CustomViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,11 +243,13 @@
 		C8A23B4A297F96A7003E4B86 /* CustomViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C83750DC29D668BE00EE8671 /* OnboardingViewCell */,
 				C81CD5D929AE5FC400BF1572 /* OrderListViewCell */,
 				C85112442983847200FC35B4 /* CategoryListView */,
 				C8A23B51297F971F003E4B86 /* ChefSpecialCollectionViewCell */,
 				C8A23B50297F9702003E4B86 /* PopularDishesCollectionViewCell */,
 				C8A23B4F297F96EE003E4B86 /* FoodCategoryCollectionViewCell */,
+				C83750DF29D748E200EE8671 /* CardView.swift */,
 			);
 			path = CustomViewCells;
 			sourceTree = "<group>";
@@ -268,6 +289,7 @@
 				C8A23B642980380B003E4B86 /* SpecialDish.swift */,
 				C851125A2984BDA200FC35B4 /* Order.swift */,
 				C84B2A962996A87100E5BF76 /* AllCategories.swift */,
+				C83750DA29D6657800EE8671 /* Onboarding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +299,7 @@
 			children = (
 				C83B9EF2299B535D008EB74C /* ViewController.swift */,
 				C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */,
+				C83D121729B6815D00238B82 /* viewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83750DB29D6657800EE8671 /* Onboarding.swift in Sources */,
 				C8A23B5D297F9794003E4B86 /* ChefSpecialCollectionViewCell.swift in Sources */,
 				C8A23B56297F9764003E4B86 /* PopularDishesCollectionViewCell.swift in Sources */,
 				C8B019FF2980C2D5003C2BE9 /* FoodDetailViewController.swift in Sources */,
@@ -414,10 +438,13 @@
 				C8A23B34297F862F003E4B86 /* HomeViewController.swift in Sources */,
 				C81CD5DC29AE5FEB00BF1572 /* OrderListTableViewCell.swift in Sources */,
 				C84B2A91299690B600E5BF76 /* Route.swift in Sources */,
+				C83750D929D6628F00EE8671 /* OnboardingViewController.swift in Sources */,
+				C83750E029D748E200EE8671 /* CardView.swift in Sources */,
 				C84B2A95299690DB00E5BF76 /* NetworkService.swift in Sources */,
 				C84B2A93299690C700E5BF76 /* Method.swift in Sources */,
 				C8B019F629804265003C2BE9 /* KingfisherStringExtension.swift in Sources */,
 				C8A23B30297F862F003E4B86 /* AppDelegate.swift in Sources */,
+				C83750DE29D668F900EE8671 /* OnboardingCollectionViewCell.swift in Sources */,
 				C8A23B652980380B003E4B86 /* SpecialDish.swift in Sources */,
 				C8A23B61298037E2003E4B86 /* FoodCategory.swift in Sources */,
 				C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */,
@@ -425,6 +452,7 @@
 				C84B2A972996A87100E5BF76 /* AllCategories.swift in Sources */,
 				C851124E2983861200FC35B4 /* CategoryListViewTableViewCell.swift in Sources */,
 				C8A23B63298037F4003E4B86 /* Food.swift in Sources */,
+				C83D121829B6815D00238B82 /* viewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,8 +606,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,8 +636,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

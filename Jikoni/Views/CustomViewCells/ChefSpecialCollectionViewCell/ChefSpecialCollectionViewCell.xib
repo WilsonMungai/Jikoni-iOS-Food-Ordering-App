@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="96"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-SH-WGl">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-SH-WGl" customClass="CardView" customModule="Jikoni" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="96"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v8E-X9-CMD">
@@ -25,6 +25,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="WoV-Xt-D2f"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Cdw-At-H2E">
                                 <rect key="frame" x="96" y="16" width="188" height="64"/>
@@ -73,6 +78,11 @@
                 <constraint firstAttribute="trailing" secondItem="Dc4-SH-WGl" secondAttribute="trailing" id="lkw-cE-pX3"/>
             </constraints>
             <size key="customSize" width="266" height="108"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="foodCaloriesLabel" destination="fq3-V7-LXT" id="LGo-fg-ahc"/>
                 <outlet property="foodDescriptionLabel" destination="lSS-uH-nmO" id="aTW-kg-Hi3"/>

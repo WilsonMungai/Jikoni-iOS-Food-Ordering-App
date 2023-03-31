@@ -22,19 +22,18 @@ class FoodDetailViewController: UIViewController {
     // Holds the selected food values
     var selectedFood: Dish!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Details"
-        populateFields()
-    }
-    
     // Function that populates the cells with data from the view controller pushing data here
     private func populateFields() {
         foodImageView.kf.setImage(with: selectedFood.image?.asUrl)
         foodName.text = selectedFood.name
-        print("ordered food is \(selectedFood?.name ?? "" )")
         foodCalories.text = selectedFood.formattedCalories
         foodDescription.text = selectedFood.description
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Details"
+        populateFields()
     }
     
     
@@ -46,7 +45,7 @@ class FoodDetailViewController: UIViewController {
             ProgressHUD.showError("Whooops!! \n Please Enter Your Name!")
             return
         }
-        print(name)
+        // post orders
         ProgressHUD.show("Placing Your Order...")
         NetworkService.shared.placeOrder(dishId: selectedFood.id ?? "", name: name) { (result) in
             switch result {

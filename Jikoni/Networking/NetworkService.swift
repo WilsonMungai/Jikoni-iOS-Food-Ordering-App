@@ -72,7 +72,7 @@ struct NetworkService {
                 result = .success(data)
                 // Convert the data to string and print
                 let responseString = String(data: data, encoding: .utf8) ?? "Couldn't springify the data"
-//                print("The response is : \n \(responseString)")
+                print("The response is : \n \(responseString)")
             } else if let error = error {
                 result = .failure(error)
                 // Retrieve the localized description for this error

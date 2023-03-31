@@ -9,7 +9,6 @@ import UIKit
 import ProgressHUD
 
 class HomeViewController: UIViewController {
-    // Color fb8500
     
     // MARK: - Collection view outlets
     @IBOutlet weak var foodCategoryCollectionView: UICollectionView!
@@ -17,32 +16,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var chefSpecialCategoryCollectionView: UICollectionView!
     
     // Food categories values
-    var foodCategories: [FoodCategory] = [
-//        .init(id: "id1", name: "Food1", image: "https://picsum.photos/100/200"),
-//        .init(id: "id1", name: "Food2", image: "https://picsum.photos/100/200"),
-//        .init(id: "id1", name: "Food3", image: "https://picsum.photos/100/200"),
-//        .init(id: "id1", name: "Food4", image: "https://picsum.photos/100/200"),
-//        .init(id: "id1", name: "Food5", image: "https://picsum.photos/100/200"),
-//        .init(id: "id1", name: "Food6", image: "https://picsum.photos/100/200")
-    ]
+    var foodCategories: [FoodCategory] = []
     
     // Popular dishes values
-    var popularDishes: [Dish] = [
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-    ]
+    var popularDishes: [Dish] = []
     
-    var special: [Dish] = [
-//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200),
-//        .init(id: "id1", name: "Pilau Masala", image: "https://picsum.photos/100/200", description: "Fried Rice", calories: 200)
-    ]
+    var special: [Dish] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,7 +96,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         default: return 0
         }
-        
     }
     
     // Inflates the collection view with cells data
@@ -144,7 +122,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         default: return UICollectionViewCell()
         }
-       
     }
     
     // Gets the selected cell

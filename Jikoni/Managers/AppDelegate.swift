@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Make the navigation bar clear
+        UINavigationBar.appearance() .setBackgroundImage(UIImage(), for: .default)
+        //Remove the navigation bar shadow
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // Makes the tint colour black
+        UINavigationBar.appearance().tintColor = .black
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         return true
     }
 

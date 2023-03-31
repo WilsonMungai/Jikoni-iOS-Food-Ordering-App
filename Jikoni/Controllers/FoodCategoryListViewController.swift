@@ -15,14 +15,7 @@ class FoodCategoryListViewController: UIViewController {
     
     var category: FoodCategory!
     
-    var categories: [Dish] = [
-//        .init(id: "id1", name: "Ugali", image: "https://picsum.photos/100/200", description: "Best meal you will ever haveBest meal you will ever haveBest meal you will ever havevBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever haveBest meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Mchele", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Pilau", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Mboga", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Chai", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-//        .init(id: "id1", name: "Sambusa", image: "https://picsum.photos/100/200", description: "Best meal you will ever have", calories: 100),
-    ]
+    var categories: [Dish] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +29,7 @@ class FoodCategoryListViewController: UIViewController {
         
         ProgressHUD.show()
         
+        // fetch category
         NetworkService.shared.fetchFoodCategories(categoryId: category.id ?? "") { [weak self] (result) in
             switch result {
             case .success(let dish):
@@ -55,6 +49,7 @@ class FoodCategoryListViewController: UIViewController {
     }
 }
 
+// MARK: - Table view extension
 extension FoodCategoryListViewController: UITableViewDelegate, UITableViewDataSource {
     // Returns the number of items 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
