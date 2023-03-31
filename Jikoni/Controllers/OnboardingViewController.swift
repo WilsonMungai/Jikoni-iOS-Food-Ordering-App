@@ -64,6 +64,10 @@ class OnboardingViewController: UIViewController {
             let controller = storyboard?.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .crossDissolve
+            
+            // Set user defaults
+            UserDefaults.standard.hasOnboarded = true
+            present(controller, animated: true, completion: nil)
         } else {
             // If you're not on the last page we want to go to the next view
             // Increment the value of the page

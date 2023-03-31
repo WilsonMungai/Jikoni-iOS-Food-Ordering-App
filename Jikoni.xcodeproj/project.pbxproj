@@ -14,6 +14,7 @@
 		C83750DB29D6657800EE8671 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750DA29D6657800EE8671 /* Onboarding.swift */; };
 		C83750DE29D668F900EE8671 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750DD29D668F900EE8671 /* OnboardingCollectionViewCell.swift */; };
 		C83750E029D748E200EE8671 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750DF29D748E200EE8671 /* CardView.swift */; };
+		C83750E229D7506500EE8671 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83750E129D7506500EE8671 /* UserDefaults.swift */; };
 		C83B9EF3299B535D008EB74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B9EF2299B535D008EB74C /* ViewController.swift */; };
 		C83D121829B6815D00238B82 /* viewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D121729B6815D00238B82 /* viewExtension.swift */; };
 		C84B2A8D2996909700E5BF76 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B2A8C2996909700E5BF76 /* APIResponse.swift */; };
@@ -56,6 +57,7 @@
 		C83750DA29D6657800EE8671 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		C83750DD29D668F900EE8671 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C83750DF29D748E200EE8671 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C83750E129D7506500EE8671 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		C83B9EF2299B535D008EB74C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C83D121729B6815D00238B82 /* viewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtension.swift; sourceTree = "<group>"; };
 		C84B2A8C2996909700E5BF76 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
@@ -180,12 +182,14 @@
 		C8A23B2E297F862F003E4B86 /* Jikoni */ = {
 			isa = PBXGroup;
 			children = (
+				C8B019F429804237003C2BE9 /* Extensions */,
 				C8A23B45297F86B5003E4B86 /* Resources */,
 				C8A23B46297F86BF003E4B86 /* Managers */,
 				C84B2A8B29968E1100E5BF76 /* Networking */,
 				C8A23B5F29803777003E4B86 /* Models */,
 				C8A23B48297F86E6003E4B86 /* Views */,
 				C8A23B47297F86D9003E4B86 /* Controllers */,
+				C8A23B49297F870A003E4B86 /* StoryBoards */,
 				C8A23B3D297F8631003E4B86 /* Info.plist */,
 			);
 			path = Jikoni;
@@ -194,7 +198,6 @@
 		C8A23B45297F86B5003E4B86 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C8A23B49297F870A003E4B86 /* StoryBoards */,
 				C8A23B38297F8631003E4B86 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -203,7 +206,6 @@
 		C8A23B46297F86BF003E4B86 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C8B019F429804237003C2BE9 /* Extensions */,
 				C8A23B2F297F862F003E4B86 /* AppDelegate.swift */,
 				C8A23B31297F862F003E4B86 /* SceneDelegate.swift */,
 			);
@@ -300,6 +302,7 @@
 				C83B9EF2299B535D008EB74C /* ViewController.swift */,
 				C8B019F529804265003C2BE9 /* KingfisherStringExtension.swift */,
 				C83D121729B6815D00238B82 /* viewExtension.swift */,
+				C83750E129D7506500EE8671 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				C8A23B32297F862F003E4B86 /* SceneDelegate.swift in Sources */,
 				C851125B2984BDA200FC35B4 /* Order.swift in Sources */,
 				C84B2A972996A87100E5BF76 /* AllCategories.swift in Sources */,
+				C83750E229D7506500EE8671 /* UserDefaults.swift in Sources */,
 				C851124E2983861200FC35B4 /* CategoryListViewTableViewCell.swift in Sources */,
 				C8A23B63298037F4003E4B86 /* Food.swift in Sources */,
 				C83D121829B6815D00238B82 /* viewExtension.swift in Sources */,

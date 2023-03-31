@@ -27,7 +27,7 @@ class OrderListViewController: UIViewController {
         
         ProgressHUD.show()
     }
-    
+    // fetch all orders
     override func viewDidAppear(_ animated: Bool) {
         NetworkService.shared.fecthOrders { [weak self] (result) in
             switch result {
